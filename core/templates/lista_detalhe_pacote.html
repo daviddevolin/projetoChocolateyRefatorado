@@ -1,0 +1,69 @@
+
+{% include './header.html' %}
+<div id="subcorpo">
+
+<h2>Detalhes do pacote {{pacote.id_do_pacote}}</h2>
+	<table  class="table table-striped" >
+          <tr>
+            <td scope="col"  class="coluna-detalhe-pacote" >Id</td>
+            <td scope="row"> {{pacote.id_do_pacote}} </td>
+          </tr>
+          <tr>
+             <td scope="col"  class="coluna-detalhe-pacote">Título</td>
+             <td> {{pacote.title}} </td>
+          </tr>
+          <tr>
+              <td scope="col"  class="coluna-detalhe-pacote">Version</td>
+              <td> {{pacote.version}} </td>
+          </tr>
+          <tr>
+              <td scope="col"  class="coluna-detalhe-pacote">Autdors</td>
+              <td> {{pacote.autdors}} </td>
+          </tr>
+          <tr>
+              <td scope="col" class="coluna-detalhe-pacote">Owners</td>
+              <td> {{pacote.owners}} </td>
+          </tr>
+          <tr>
+              <td scope="col" class="coluna-detalhe-pacote">Summary</td>
+              <td> {{pacote.summary}} </td>
+          </tr>
+          <tr>
+              <td scope="col" class="coluna-detalhe-pacote">Project_URL</td>
+              <td> {{pacote.project_URL}} </td>
+          </tr>
+          <tr>
+              <td scope="col" class="coluna-detalhe-pacote">icon_URL</td>
+              <td> {{pacote.icon_URL}} </td>
+          </tr>
+          <tr>
+              <td scope="col" class="coluna-detalhe-pacote">Description</td>
+              <td> {{pacote.description}} </td>
+          </tr>
+          <tr>
+              <td scope="col" class="coluna-detalhe-pacote">Require_license_acceptance</td>
+              <td> {{pacote.require_license_acceptance}} </td>
+          </tr>
+          <tr>
+              <td scope="col" class="coluna-detalhe-pacote">Dependencia</td>
+              <td> {{pacote.dependencia}} </td>
+          </tr>
+          <tr>
+              <td scope="col" class="coluna-detalhe-pacote">Installer_type</td>
+               <td> {{pacote.installer_type}} </td>
+          </tr>
+          <tr>
+              <td scope="col" class="coluna-detalhe-pacote">unattended_arguments</td>
+              <td> {{pacote.unattended_arguments}} </td>
+          </tr>
+          <tr>
+              <td scope="col" class="coluna-detalhe-pacote">URL</td>
+              <td> {{pacote.URL}} </td>
+          </tr>
+          <tr>
+              <td scope="col" class="coluna-detalhe-pacote">URL_64</td>
+              <td> {{pacote.URL_64}} </td>
+          </tr>
+      </table>
+</div>
+{% include './footer.html' %}

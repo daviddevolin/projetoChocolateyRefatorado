@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<head>
+    
+    <title>Chocolatey IFRN PAAS</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/base.css'%}">
+	<script src="{% static 'js/index.js'%}"></script>
+	</style>
+  </head>
+  <body>
+  	<div id="topbar">
+  		<span id="esquerda">
+  			<a href="http://portal.ifrn.edu.br/campus/parelhas"><img src="{% static 'img/logo_ifrn.png'%}" alt="Logotipo IFRN" /></a>
+        	<a href="http://chocolatey.org/"><img src=" {% static 'img/chocolatey.png' %}" alt="Logotipo IFRN" /></a>
+  		</span>
+  		
+        <span id="direita">
+        	<a href="{% url 'cadastro_pacote' %}" >Cadastrar Pacote</a>
+        	|<a href="{% url 'lista_pacotes' %}" >Listar Pacotes</a>
+        	|<a href="comandosUteis.php">Comandos Úteis</a>
+        </span>
+    </div>

@@ -1,0 +1,60 @@
+
+{% include './header.html' %}
+<div id="subcorpo">
+
+        <div id="header" class="container">
+            <p>
+                <h2>Bem-vindo ao Servidor Chocolatey do IFRN - Campus Parelhas.</h2>
+            </p>
+        </div>
+        
+        <div class="container">
+            <div class="cmd"  >
+                <p id="comandoInstalacao" >
+                    @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('http://susana.ifrn.local/executaveis/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"	&& cd %ALLUSERSPROFILE%\chocolatey\bin
+                </p>
+            </div>
+            <p>
+                Se quiser <span class="nicetext">instalar</span> o programa no seu computador, copie e cole o comando presente no console em um <em>CMD</em> como ADMINISTRADOR:
+            </p>
+            <input type="button" value="Clique aqui para selecionar" id="botaoCopiar" class="botao" onclick="selectCommand('comandoInstalacao');" />
+        </div>
+        
+        <div class="container">
+            <div class="cmd"  > 
+                <p id="comandoDesinstalacao" >
+                    cd %ALLUSERSPROFILE% && rmdir /s /q chocolatey
+                </p>
+            </div>
+            <p>
+                Se quiser <span class="badtext">desinstalar</span> o programa do seu computador, copie e cole o comando presente no console em um <em>CMD</em> como ADMINISTRADOR:
+            </p>
+            <input type="button" value="Clique aqui para selecionar" id="botaoCopiar" class="botao" onclick="selectCommand('comandoDesinstalacao');" />
+        </div>
+        
+        <div class="container">
+            <div class="powershell">
+                <p id="comandoInstalacaoPowerShell">
+                    Set-ExecutionPolicy Unrestricted; iex ((New-Object System.Net.WebClient).DownloadString('http://susana.ifrn.local/executaveis/install.ps1')); SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"; cd $ENV:ALLUSERSPROFILE\chocolatey\bin
+                </p>
+            </div>
+            <p>
+                Para <span class="nicetext">instalar</span> usando o <em>Powershell</em>, execute-o como ADMINISTRADOR e utilize o comando:
+            </p>
+            <input type="button" value="Clique aqui para selecionar" id="botaoCopiar" class="botao" onclick="selectCommand('comandoInstalacaoPowerShell');" />
+        </div>
+        
+        <div class="container">
+            <div class="powershell"  >
+                <p id="comandoDesinstalacaoPowerShell" >
+                    cd $ENV:ALLUSERSPROFILE; rmdir /s /q chocolatey
+                </p>
+            </div>
+            <p>
+                Se quiser <span class="badtext">desinstalar</span> o programa do seu computador utilizando <em>Powershell</em>, copie e cole o comando presente no console como ADMINISTRADOR:
+            </p>
+            <input type="button" value="Clique aqui para selecionar" id="botaoCopiar" class="botao" onclick="selectCommand('comandoDesinstalacaoPowerShell');" />
+        </div>
+        
+    </div>
+    {% include './footer.html' %}

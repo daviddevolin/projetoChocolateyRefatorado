@@ -1,0 +1,18 @@
+
+{% include './header.html' %}
+<div id="subcorpo">
+
+<h2>Novo Pacote</h2>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+
+        <p> Título: </p><br />
+        {{ form.title }} <br />
+
+        <button type="submit" class="save btn btn-default">Enviar</button>
+    </form>
+    {% for pacote in pacotes %}
+        <p> {{ pacote.icon_URL }} </p>
+    {% endfor %}
+</div>
+{% include './footer.html' %}

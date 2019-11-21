@@ -1,0 +1,25 @@
+
+{% include './header.html' %}
+<div id="subcorpo">
+
+<h2>Lista de pacotes</h2>
+	<table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Título</th>
+            <th scope="col">Opções</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for pacote in pacotes %}
+                <th scope="row"> {{pacote.id_do_pacote}} </th>             
+                <td> {{pacote.title}} </td>
+                <td>  <a href="{% url 'lista_detalhe_pacote' pacote.id_do_pacote %}" > Detalhes </a> </td>
+                
+            </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+</div>
+{% include './footer.html' %}
